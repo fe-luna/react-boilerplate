@@ -1,0 +1,5 @@
+{
+  "*.{tsx,ts,jsx,js}": ["prettier --write"],
+  "*.{css,scss,less}": ["prettier --write"],
+  "*.{json,html,md}": ["prettier --write"]
+}
