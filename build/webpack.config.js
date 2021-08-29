@@ -2,7 +2,10 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.tsx',
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '',
@@ -11,7 +14,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.[tj]sx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
