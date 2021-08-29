@@ -10,8 +10,8 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config ./build/webpack.config.js",
-    "dev": "webpack serve --config ./build/webpack.config.js",
+    "build": "webpack --config ./build/webpack.prod.js",
+    "dev": "webpack serve --config ./build/webpack.dev.js",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "prettier": "^2.3.2",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.0.0"
+    "webpack-dev-server": "^4.0.0",
+    "webpack-merge": "^5.8.0"
   }
 }
