@@ -1,13 +1,12 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import About from './about'
-import Home from './home'
+import loadable from '@loadable/component'
 
 export default function () {
   return (
     <Switch>
-      <Route path='/about' component={About} />
-      <Route path='/' component={Home} />
+      <Route path='/about' component={loadable(() => import('./about'))} />
+      <Route path='/' component={loadable(() => import('./home'))} />
     </Switch>
   )
 }

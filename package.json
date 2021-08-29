@@ -15,6 +15,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@loadable/component": "^5.15.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.1",
@@ -28,6 +29,7 @@
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.0-rc.5",
+    "@types/loadable__component": "^5.13.4",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
     "@types/react-router-dom": "^5.1.8",
