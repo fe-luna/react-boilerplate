@@ -1,5 +1,6 @@
 const path = require('path')
 const { merge } = require('webpack-merge')
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const common = require('./webpack.config')
 
 module.exports = merge(common, {
@@ -10,4 +11,5 @@ module.exports = merge(common, {
       directory: path.resolve(__dirname, '../dist'),
     },
   },
+  plugins: [new ReactRefreshWebpackPlugin()],
 })
