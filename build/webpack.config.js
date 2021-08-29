@@ -25,7 +25,20 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+          {
+            loader: 'style-resources-loader',
+            options: {
+              patterns: [
+                path.resolve(__dirname, '../src/styles/variables/index.scss'),
+                path.resolve(__dirname, '../src/styles/mixins/index.scss'),
+              ],
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
