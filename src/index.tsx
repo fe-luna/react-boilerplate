@@ -1,7 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
+import Pages from './pages'
 
-const Luna = () => <div>Luna</div>
+const App = (
+  <BrowserRouter>
+    <Pages />
+  </BrowserRouter>
+)
 const root = document.getElementById('app')
 
-ReactDOM.render(<Luna />, root)
+ReactDOM.render(App, root)
