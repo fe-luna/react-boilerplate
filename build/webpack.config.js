@@ -44,6 +44,14 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        type: 'asset',
+      },
+      {
+        test: /\.(woff2?|eot|[ot]tf)$/,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [
