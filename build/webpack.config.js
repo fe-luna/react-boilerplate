@@ -10,6 +10,7 @@ module.exports = {
     },
   },
   output: {
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '',
     clean: true,
@@ -60,4 +61,17 @@ module.exports = {
       favicon: './public/favicon.ico',
     }),
   ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          // TODO only include the core frameworks and utilities,
+          // and dynamically load the rest of the dependencies
+          chunks: 'all',
+        },
+      },
+    },
+  },
 }
