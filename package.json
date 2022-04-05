@@ -9,9 +9,8 @@
   "author": "fe-luna",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --config ./build/webpack.dev.js",
     "build": " cross-env NODE_ENV=production webpack --config ./build/webpack.prod.js",
-    "dev": "webpack serve --config ./build/webpack.dev.js",
     "prepare": "husky install"
   },
   "dependencies": {
